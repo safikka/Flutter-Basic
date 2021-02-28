@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'latihan/AnimatedContainer.dart';
 import 'latihan/ListData.dart';
 
 void main() => runApp(MyApp());
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListData(),
+      home: AnimationContainer(),
     );
   }
 }
