@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_latihan_konsep/latihan/InputData.dart';
 import 'latihan/AnimatedContainer.dart';
 import 'latihan/ListData.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimationContainer(),
+      home: InputData(),
     );
   }
 }
