@@ -12,9 +12,8 @@ class BelajarNavigation extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu_outlined),
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (c) => MenuPage()),
-            );
+            // navigasi pake pushname, harus definisi nama route dulu di main.dart
+            Navigator.of(context).pushNamed('route1');
           },
         ),
 
@@ -38,16 +37,39 @@ class BelajarNavigation extends StatelessWidget {
 
         elevation: 0.0,
       ),
+      body: Column(
+        children: [
+          Center(
+            child: RaisedButton(
+              child: Text('Halaman A'),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MenuPage(),
+                    ));
+              },
+            ),
+          ),
+          Center(
+            child: RaisedButton(
+              child: Text('Halaman B'),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(),
+                    ));
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
 
-class MenuPage extends StatefulWidget {
-  @override
-  _MenuPageState createState() => _MenuPageState();
-}
-
-class _MenuPageState extends State<MenuPage> {
+class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +80,47 @@ class _MenuPageState extends State<MenuPage> {
             child: RaisedButton(
               child: Text('HomePage'),
               onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
+          Center(
+            child: RaisedButton(
+              child: Text('SecondPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SecondPage()));
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: RaisedButton(
+              child: Text('HomePage'),
+              onPressed: () {
+                // Balik ke halaman default utowo halaman awal banget
+                Navigator.popUntil(
+                    context, ModalRoute.withName(Navigator.defaultRouteName));
+              },
+            ),
+          ),
+          Center(
+            child: RaisedButton(
+              child: Text('Ke halaman A'),
+              onPressed: () {
+                // balik ke halaman sebelumnya
                 Navigator.pop(context);
               },
             ),

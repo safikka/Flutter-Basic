@@ -11,7 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // definisi nama route pas pake pushnamed
+      routes: {
+        'route1': (BuildContext context) => MenuPage(),
+      },
+
+      // ngilangin tulisan debug
       debugShowCheckedModeBanner: false,
+
+      // set home
       home: BelajarNavigation(),
     );
   }
