@@ -1,16 +1,17 @@
 # flutter_latihan_konsep
 
-A new Flutter project.
+Buku catatan belajar Flutter Dasar
 
-## Getting Started
+## Awalan
 
-This project is a starting point for a Flutter application.
+Repo ini dibuat sebagai media latihan Flutter dan Dart dasar, selain sebagai *track-record* pengetahuan pun juga sebagai buku catatan apabila dilain waktu ingin *recall* kembali
 
-A few resources to get you started if this is your first Flutter project:
+Hal dasar meliputi:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter Layout Dasar](https://flutter.dev/docs/get-started/codelab)
+- [Flutter Layout Tambahan](https://flutter.dev/docs/cookbook)
+- [Flutter Navigasi](https://flutter.dev/docs/cookbook)
+- [Flutter State Management](https://flutter.dev/docs/cookbook)
+- [Flutter Consuming API](https://flutter.dev/docs/cookbook)
+- [Flutter Local Storage](https://flutter.dev/docs/cookbook)
+- [Flutter Testing + Deploy](https://flutter.dev/docs/cookbook)
