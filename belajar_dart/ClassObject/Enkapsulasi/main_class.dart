@@ -17,8 +17,8 @@ void main() {
   objek2.setPanjang(double.tryParse(
       stdin.readLineSync())); //setter buat variabel private _panjang
 
-  double luasobjek1 = objek1.luas();
-  double luasobjek2 = objek2.luas();
+  double luasobjek1 = objek1.luas;
+  double luasobjek2 = objek2.luas;
   double totalobjek = luasobjek1 + luasobjek2;
 
   print('Nilai total luas kedua objek: ' + totalobjek.toString());

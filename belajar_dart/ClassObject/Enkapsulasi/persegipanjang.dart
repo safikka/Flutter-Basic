@@ -24,6 +24,9 @@ class PersegiPanjang {
 
   // bikin PROPERTY SETTER
   void set lebar(double value) {
+    if (value < 0) {
+      value *= -1;
+    }
     _lebar = value;
   }
 
@@ -32,7 +35,5 @@ class PersegiPanjang {
     return _lebar;
   }
 
-  double luas() {
-    return this._panjang * this._lebar;
-  }
+  double get luas => this._panjang * this._lebar;
 }
